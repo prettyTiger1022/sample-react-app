@@ -4,7 +4,7 @@ import "./App.css";
 
 const Movie = (props) => {
   return (
-    <div key={props.movie.id} className="movie">
+    <div key={props.movie.id}>
       <Card style={{ width: "15rem" }} className="mb-2">
         <Card.Body>
           <Card.Title> {props.movie.name} </Card.Title>

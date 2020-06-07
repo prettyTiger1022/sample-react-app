@@ -11,9 +11,10 @@ function App() {
       <MovieProvider>
         <Nav />
         <hr />
-        <MovieList />
-        <br />
         <AddMovie />
+        <br />
+        <h1> Movies </h1>
+        <MovieList />
       </MovieProvider>
     </div>
   );

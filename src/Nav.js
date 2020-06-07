@@ -7,6 +7,7 @@ const Nav = () => {
 
   return (
     <nav className="App-header">
+      <h2> Movie Details App </h2>
       <h2> List of Movies : {movies.length}</h2>
     </nav>
   );

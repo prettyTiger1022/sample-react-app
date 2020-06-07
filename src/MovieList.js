@@ -9,7 +9,6 @@ const MovieList = () => {
 
   return (
     <Container className="movieList">
-      <h1> Movies : </h1>
       {movies.map((movie) => (
         <Movie movie={movie} />
       ))}
