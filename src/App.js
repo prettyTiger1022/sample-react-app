@@ -9,6 +9,7 @@ function App() {
   return (
     <MovieProvider>
       <Nav />
+      <hr />
       <MovieList />
       <br />
       <AddMovie />
