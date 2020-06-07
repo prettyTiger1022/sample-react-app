@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Container, ListGroup } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import Movie from "./Movie";
 import { MovieContext } from "./MovieContext";
 
@@ -8,11 +8,9 @@ const MovieList = () => {
 
   return (
     <Container>
-      <ListGroup>
-        {movies.map((movie) => (
-          <Movie movie={movie} />
-        ))}
-      </ListGroup>
+      {movies.map((movie) => (
+        <Movie movie={movie} />
+      ))}
     </Container>
   );
 };

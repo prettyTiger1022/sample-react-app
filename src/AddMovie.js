@@ -1,13 +1,6 @@
 import React, { useState, useContext } from "react";
 import { MovieContext } from "./MovieContext";
-import {
-  Button,
-  Col,
-  FormControl,
-  Row,
-  Form,
-  FormLabel,
-} from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 
 const AddMovie = () => {
   const [movieName, setMovieName] = useState("");
