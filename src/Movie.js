@@ -8,7 +8,6 @@ const Movie = (props) => {
       <Card style={{ width: "15rem" }} className="mb-2">
         <Card.Body>
           <Card.Title> {props.movie.name} </Card.Title>
-          <Card.Text>ID : {props.movie.id}</Card.Text>
           <Card.Text>Price : {props.movie.price}</Card.Text>
         </Card.Body>
       </Card>

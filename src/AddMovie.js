@@ -5,7 +5,6 @@ import { Button, Form } from "react-bootstrap";
 const AddMovie = () => {
   const [movieName, setMovieName] = useState("");
   const [moviePrice, setMoviePrice] = useState("");
-  const [movieId, setMovieId] = useState("");
 
   const [movies, setMovies] = useContext(MovieContext);
 
@@ -17,20 +16,15 @@ const AddMovie = () => {
     setMoviePrice(e.target.value);
   };
 
-  const onAddMovieId = (e) => {
-    setMovieId(e.target.value);
-  };
-
   const onAddMovie = (e) => {
     e.preventDefault();
     setMovies((prevMovies) => [
       ...movies,
-      { name: movieName, price: moviePrice, id: movieId },
+      { name: movieName, price: moviePrice },
     ]);
 
     setMovieName("");
     setMoviePrice("");
-    setMovieId("");
   };
 
   return (
@@ -51,14 +45,6 @@ const AddMovie = () => {
           placeholder="Movie Price"
           value={moviePrice}
           onChange={onAddMoviePrice}
-        />
-      </Form.Group>
-      <Form.Group>
-        <Form.Label> Movie Id </Form.Label>
-        <Form.Control
-          placeholder="Movie Id"
-          value={movieId}
-          onChange={onAddMovieId}
         />
       </Form.Group>
       <Button onClick={onAddMovie}>Submit</Button>
