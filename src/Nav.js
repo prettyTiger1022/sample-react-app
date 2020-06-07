@@ -1,14 +1,14 @@
-import React, {useContext} from "react";
-import {MovieContext} from './MovieContext'
+import React, { useContext } from "react";
+import { MovieContext } from "./MovieContext";
+import "./App.css";
 
 const Nav = () => {
-
-    const [movies, setMovies] = useContext(MovieContext);
+  const [movies, setMovies] = useContext(MovieContext);
 
   return (
-  <nav>
+    <nav className="App-header">
       <h2> List of Movies : {movies.length}</h2>
-  </nav>
+    </nav>
   );
 };
 

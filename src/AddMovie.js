@@ -3,10 +3,10 @@ import { MovieContext } from "./MovieContext";
 import {
   Button,
   Col,
-  Container,
   FormControl,
-  ListGroup,
   Row,
+  Form,
+  FormLabel,
 } from "react-bootstrap";
 
 const AddMovie = () => {
@@ -34,38 +34,41 @@ const AddMovie = () => {
       ...movies,
       { name: movieName, price: moviePrice, id: movieId },
     ]);
+
+    setMovieName("");
+    setMoviePrice("");
+    setMovieId("");
   };
 
   return (
-    <div>
-      <Row>
-        <Col md={5}> Movie Name :
-          <FormControl
-            value={movieName}
-            onChange={onAddMovieName}
-          ></FormControl>
-        </Col>
-      </Row>
-      <br />
-      <Row>
-        <Col md={5}>
-          Movie Price :
-          <FormControl
-            value={moviePrice}
-            onChange={onAddMoviePrice}
-          ></FormControl>
-        </Col>
-      </Row>
-      <br />
-      <Row>
-          <Col md={5}>
-          Movie Id :
-          <FormControl value={movieId} onChange={onAddMovieId}></FormControl>
-        </Col>
-      </Row>
-      \
-      <br />
-      <Button onClick={onAddMovie}>Add Movie</Button>
+    <div className="addMovie">
+      <Form.Group>
+        <Form.Label> Movie Name </Form.Label>
+        <Form.Control
+          md={5}
+          placeholder="Movie Name"
+          value={movieName}
+          onChange={onAddMovieName}
+        />
+      </Form.Group>
+
+      <Form.Group>
+        <Form.Label> Movie Price </Form.Label>
+        <Form.Control
+          placeholder="Movie Price"
+          value={moviePrice}
+          onChange={onAddMoviePrice}
+        />
+      </Form.Group>
+      <Form.Group>
+        <Form.Label> Movie Id </Form.Label>
+        <Form.Control
+          placeholder="Movie Id"
+          value={movieId}
+          onChange={onAddMovieId}
+        />
+      </Form.Group>
+      <Button onClick={onAddMovie}>Submit</Button>
     </div>
   );
 };
