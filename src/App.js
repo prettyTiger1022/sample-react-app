@@ -7,13 +7,15 @@ import AddMovie from "./AddMovie";
 
 function App() {
   return (
-    <MovieProvider>
-      <Nav />
-      <hr />
-      <MovieList />
-      <br />
-      <AddMovie />
-    </MovieProvider>
+    <div className="App">
+      <MovieProvider>
+        <Nav />
+        <hr />
+        <MovieList />
+        <br />
+        <AddMovie />
+      </MovieProvider>
+    </div>
   );
 }
 
